@@ -134,20 +134,22 @@ const NetworkAlertLabel = styled(NetworkLabel)`
 // background-color: ${({ theme }) => theme.deprecated_bg0}; => before
 const SelectorControls = styled.div<{ supportedChain: boolean }>`
   align-items: center;
-  background-color: '#3B3C4E';
-  border: 2px solid ${({ theme }) => theme.deprecated_bg0};
+  background: red !important;
+  border: none;
   border-radius: 16px;
   color: ${({ theme }) => theme.deprecated_text1};
   display: flex;
   font-weight: 300;
   justify-content: space-between;
-  padding: 6px 8px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
   ${({ supportedChain, theme }) =>
     !supportedChain &&
     `
     color: ${theme.deprecated_white};
-    background-color: ${theme.deprecated_red1};
-    border: 2px solid ${theme.deprecated_red1};
+    background: #3B3C4E !important;
+    border: none;
   `}
   cursor: default;
   :focus {
