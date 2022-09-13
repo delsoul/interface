@@ -37,6 +37,10 @@ const Web3StatusGeneric = styled(ButtonSecondary)`
   :focus {
     outline: none;
   }
+  :active {
+    border: none;
+    outline: none;
+  }
 `
 const Web3StatusError = styled(Web3StatusGeneric)`
   background-color: ${({ theme }) => theme.deprecated_red1};
@@ -45,21 +49,27 @@ const Web3StatusError = styled(Web3StatusGeneric)`
   font-weight: 500;
   :hover,
   :focus {
+    outline: none;
     background-color: ${({ theme }) => darken(0.1, theme.deprecated_red1)};
+  }
+  :active {
+    outline: none;
+    border: none;
   }
 `
 
 const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
   background-color: ${({ theme }) => theme.deprecated_primary4};
-  border: none;
+  border: none !important;
 
   color: ${({ theme }) => theme.deprecated_primaryText1};
   font-weight: 500;
 
   :hover,
   :focus {
-    border: 1px solid ${({ theme }) => darken(0.05, theme.deprecated_primary4)};
-    color: ${({ theme }) => theme.deprecated_primaryText1};
+  }
+  :active {
+    border: none !important;
   }
 
   ${(
@@ -76,6 +86,10 @@ const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
         border: 1px solid ${({ theme }) => darken(0.05, theme.deprecated_primary4)};
         color: ${({ theme }) => darken(0.05, theme.deprecated_primaryText1)};
       }
+      :active {
+        outline: none;
+        border: none;
+      }
     `}
 `
 
@@ -89,6 +103,9 @@ const Web3StatusConnected = styled(Web3StatusGeneric)<{ pending?: boolean }>`
     border: none;
 
     :focus {
+      border: none;
+    }
+    :active {
       border: none;
     }
   }
@@ -105,6 +122,9 @@ const Text = styled.p`
   font-weight: 500;
   color: white;
   background: transparent;
+  :active {
+    border: none;
+  }
 `
 
 const NetworkIcon = styled(AlertTriangle)`
