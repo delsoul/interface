@@ -239,7 +239,7 @@ export default function Menu() {
                         <Trans>About</Trans>
                       </div>
                     </MenuItem>
-                    <MenuItem href="https://help.uniswap.org/">
+                    <MenuItem href="https://t.me/TMYchain_chat">
                       <HelpCircle opacity={0.6} size={16} />
                       <div>
                         <Trans>Help Center</Trans>
